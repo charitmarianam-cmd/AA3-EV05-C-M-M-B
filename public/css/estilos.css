@@ -1,0 +1,288 @@
+/* =========================================================
+   ESTILOS MULTISERVICIOS OMEGA M.F. S.A.S. (AZUL Y BLANCO)
+   ========================================================= */
+
+/* ---------- ESTILOS GENERALES ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ebf8ff; /* Azul cielo claro de fondo */
+  color: #1e293b;
+  margin: 0;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b192c; /* Azul oscuro noche */
+  padding: 12px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* ---------- LOGO ---------- */
+
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#img-logo {
+  height: 42px;
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- MENÚ ---------- */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #38bdf8; /* Azul claro fluorescente */
+}
+
+/* ---------- BOTÓN HAMBURGUESA ---------- */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #38bdf8;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.encabezado {
+  background-color: #1e3a8a; /* Azul rey profundo */
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 10px;
+}
+
+.encabezado h1 {
+  font-size: 25px;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.encabezado p {
+  font-size: 14px;
+  color: #e0f2fe;
+  margin: 0;
+}
+
+
+/* =========================================================
+   CAJAS DE CONTENIDO (BLANCAS)
+   ========================================================= */
+
+.caja {
+  background-color: #ffffff; /* Blanco puro */
+  border: 1px solid #cbd5e1;
+  padding: 25px 30px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 850px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.caja p {
+  line-height: 1.6;
+  color: #334155;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.caja ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.caja li {
+  position: relative;
+  padding-left: 28px;
+  margin: 8px 0;
+  color: #334155;
+  font-size: 15px;
+}
+
+.caja li::after {
+  content: "☑︎";
+  position: absolute;
+  left: 0;
+  color: #0284c7; /* Azul cerúleo */
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+h2 {
+  color: #1d4ed8; /* Azul rey destacado */
+  font-size: 21px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #1d4ed8;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0284c7;
+  border-color: #0284c7;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.pie {
+  background-color: #0b192c; /* Azul noche */
+  color: #ffffff;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+.contenido {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETS Y CELULARES
+   ========================================================= */
+
+@media (max-width: 1040px) {
+  .caja {
+    width: 95%;
+  }
+
+  .contenido {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    background-color: #0b192c;
+    padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu li a {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .nav-menu li a:hover {
+    background-color: #1e3a8a;
+    color: #ffffff;
+  }
+
+  .encabezado h1 {
+    font-size: 20px;
+  }
+
+  .caja {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .caja h2 {
+    font-size: 18px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
